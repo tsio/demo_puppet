@@ -1,0 +1,232 @@
+mail_forward:
+  - o.tsigenov@fz-juelich.de
+  - c.manzano@fz-juelich.de
+
+resolv_conf: |
+ search fz-juelich.de
+ nameserver 134.94.32.3
+ nameserver 134.94.32.4
+ nameserver 134.94.32.5
+
+ssh_pub_keys:
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAn98FaP3Gf11bLsghwdRhI8zoD2xRutZnIx09r9lvVN8Pw6t/LRGgCdDx4fo5UsGZyj2pSz8+xkUcWXvO2KIOuid2VaVpvzk7AECqwfVKsf4HWWxZZwH3v0T2NyOHaZtvRj8DRmMrjxiX2qMbC0QeIWE4Kk6QMQrBlUXkJhLHwcpfB77/BbsnbLymUlFe+Y9mSo9aRbhLdUlf0MTMRfCkfK3GtaRFic5xbvO7MJ3Ow2XSOFjYyqV5sIF+8gJVXNebjnC6ETgki0spD+xYmkX5gqhf1oBnI8lpp3q5Lv4H6+mBp0J4d5eCQGzS8YcgIHPNzZfDQ6OYms8SXRL0w8qywQ== manzano@zam360'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNntzpUv0OB5NytgjrsGZLiY3RtH0JscxDiCiwITZno1wMMBc+2k7m1IoH2o6q3GzTukAh7AstsOkTVHRZa4QfinRr4orN7NIlZMbNPBFQr6ZH5swNJ+hIMY6J6CfIWnO4Z/2pUwVccDODpzSwANxIKSQu7TUk4cjpv6knCteOVyv1OF0fWcxDzixAhE+I/O7x18aHYcr9apYZjYvmnfJhsi8G3yMDFKUQxudPoGmoX3AMHu9rvori5+xm+eJ+rwhjE0SzRQwyRuELiY6YOsVH7ayyRg1Mtjx/AKPOzErf+mnUIlyztfOcFeeHK6dwylJ/avRb5SeXK/IsxuE9l+2t manzano@zam565'
+  - 'ssh-dss AAAAB3NzaC1kc3MAAACBALRBHBZleIYSkLEqItIKWR6UEDN308jKa96v1p98dsYjlvBBEjUIvxuyljX6Uy7Yo4oKuTfXiXIUltMkHh4546VhJFyt8COGbx43xA7Hb0I9A1/VyZo3/3XOmeH3QE9b8eDRzCsyqglY+CIHbsdNBFx0KSdp7aG8DowxGkiLG23pAAAAFQCRlmSpJuxcdWpCSwMzsU6222MbTwAAAIA8cRfH6AIpbVlEUthRjcz4cvEFZzmMIbJxrenisrbOqXME3T+N5sh98y8cALH5b/V+sck0rtHPg1aVDu+/tuOaR+AXaC8ZtgRPJpxj2F/8pOlGBal4za7p5HBpWKDql+3XeQaQolUhlFKw62Rf2Ow2Quh9bkpJI2O7+z2fPoYfmAAAAIAqi5uPcXx0KuluCF/g+ecU31VrsX985uJN2OUpPXjgFM2fkbA/vvu/eCrpLyGx1CqfBSbEzPXPM+01Tz3PETrIgtwLp1Aeb+N/f8ifl8iZxK/e/xPHsx5gYsIJRfuTcWRHi/oFD2/bNHPUAk39zUhzi2rpMbhFUCAzBMq3harDWw== beratung@zam480'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEA7ZxQ1K7E1LO/MUqdk9qJoE5QMRrqX7fGswWkpgk925g6sAKXs8b8fzoUtNy/6hgFiHuxf/2jHT1fvnGvT76PXAV+Qmi4oUPXbbhzkWJC/r14BoNyUq7yMbFb3DmPGYS9AcX3xo6a0gx+pwNQajdReFJIW0kX4K5Jn1TweJ4g2BM= beratung@zam480'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAxRKYjwSxnFGPds173dVUMBLdDJuCn/lY1zz0mrV8XM0LvCMMXysOUUoqgs2c1OJedxV7vSb4aCwOeVmgNR0Y3ib2SsMvxz3QiwTbk2j/pGeTlPdcLTQVdrRX3yBr+4e7DDNxldrLWdNbao2z5ZLUWquAA5qyGLuVf+ggmXrs+3E= o.mextorf@fz-juelich.de'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAxyZsqpDNTFxcqqlQwbwyt7zi1SJkrLRcreBZeR/jjF2Br+doa/05lvXIOMob29gywobwYiX45jjoHJU/s499kAi0+dohBpjzGWDlT991pEK0X6hEMBbh50lYMpwF3tHe1xdm136xJdv2D/sbKUVoRuP0pWFJznppGdq3xIs3exU= zdv098@zam545'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6DT3HhmWk0M1jp6Szx9V+FwWG0cBQOsOEjVDHXAtOO5Ry0U6+4+4E24j4fWBuCo9YP7ys8Q7e7vcuIM4BwZd81pVxGXdt32exYxhFNS46Ap1FMuEyxh7J7EUXfBnKjEHyFBqXXS2+c3+BzoXeAXKpbv47kefR84XkXoZmsHzjMDUfJN+Y6WEaP/Dth10w9tViDYfjjZI6kxrBdROHNaOb1ksejP0HDKXmkNlVvdFWW3UswRipxlrNgwJMxuisi97oO2OD1BfP28ZQHa82/4MzvTzf6obr1GBkCT0Xp6Y1+fkSMtN1y6XTcKeKgghKWOPJclRuMJTwskf8NuEsN5wl tsio@zam1181'
+  
+common_pkgs:
+  - 'java-1.8.0-openjdk'
+
+common_pkgs_5:
+  - 'jre1.8.0_73.x86_64'  
+
+dcache:
+  nodes:
+    test-se.fz-juelich.de:
+      domains:
+       - dcache
+       - pool
+       - dcap
+       - webdav 
+    dcache-test.fz-juelich.de:
+      domains:
+       - pool
+       - dcap
+       - webdav 
+       - srm
+       
+dcache_version: '2.13.28-1'
+
+dcache_conf_lofar:
+  dcache: 
+    dcache.log.dir: '/var/log/dcache'
+    dcache.layout    : '${host.name}'
+    dcache.namespace : 'chimera'
+    dcache.broker.host  : 'dcache-lofar.fz-juelich.de'
+    dcache.upload-directory : '/pnfs/fz-juelich.de/data/upload'
+    dcache.enable.space-reservation : 'false'
+    dcache.user : 'dcache'
+    dcache.paths.billing: '/data/billing'
+    
+  chimera:
+    chimera.db.user  : 'chimera'
+    chimera.db.url   : 'jdbc:postgresql://localhost/chimera?prepareThreshold=3'
+    chimera.db.name  : 'chimera'
+
+
+  ftp:
+    ftp.limits.streams-per-client : '20'
+    ftp.proxy.on-passive  : 'false'
+    ftp.proxy.on-active : 'false'
+    ftp.performance-marker-period : '30'
+  
+  billig:
+    billing.enable.db : 'true'
+    billing.db.name: 'billing'
+    billing.db.user: 'srmdcache'
+
+  httpd:
+    httpd.enable.authn  : 'true'
+    httpd.enable.plots.billing  : 'true'
+    httpd.enable.plots.pool-queue : 'true'
+    httpd.authz.admin-gid : '500'
+
+  info-provider:
+    info-provider.site-unique-id : 'FZJ'
+    info-provider.se-unique-id : 'dcache-lofar.fz-juelich.de'
+    info-provider.se-name : 'Juelich LOFAR dCache'
+    info-provider.dcache-architecture : 'tape'
+    info-provider.paths.tape-info : '/var/opt/dcache/tape-info.xml'
+    info-provider.http.host : 'dcache-lofar.fz-juelich.de'
+
+  srm:
+    srm.enable.pin-online-files : 'false'
+    srm.persistence.enable.history  : 'true'
+    srm.net.local-hosts : 'dcache-lofar.fz-juelich.de,lofar-srm.fz-juelich.de'
+    srm.net.host : 'dcache-lofar.fz-juelich.de'                                                                                                                              
+    srm.limits.jetty-connector.acceptors : '8'
+    srm.limits.jetty.threads.max : '5000'
+    srm.limits.jetty.threads.queued.max : '1000'
+    srm.limits.db.queue : '2000'                                                                                                                                             
+    srm.persistence.enable : 'false'                                                                                                                                         
+    srm.persistence.enable.clean-pending-on-restart : 'true'                                                                                                                 
+    srm.request.threads : '100'
+    srm.request.put.threads : '100'                                                                                                                                          
+    srm.request.bring-online.threads : '100'                                                                                                                                 
+    srm.request.retries : '2'                                                                                                                                                
+    srm.request.copy.retries : '2'
+    srm.request.put.retries : '2'                                                                                                                                            
+    srm.request.bring-online.retries : '2'
+    srm.request.max-transfers : '5000'                                                                                                                                       
+    srm.db.name: 'dcache'
+    srm.db.user: 'srmdcache'
+
+  pnfsmanager:                                                                                                                               
+    pnfsmanager.limits.threads-per-group : '24'                                                                                                                              
+    pnfsmanager.limits.list-threads : '4'
+    pnfsmanager.enable.folding : 'true'
+    pnfsmanager.limits.log-slow-threshold : '1000'
+    pnfsmanager.enable.full-path-permission-check : 'false'
+    pnfsmanager.db.connections.max: '50'
+ 
+  poolmanager:
+    poolmanager.service.pool.timeout: '5000'                                                                                                                          
+
+  pinmanager:
+    pinmanager.db.name: 'dcache'
+    pinmanager.db.user: 'srmdcache'
+
+  transfermanagers:
+    transfermanagers.db.name: 'dcache'
+    transfermanagers.db.user:  'srmdcache'
+
+
+dcache_conf_ildg:
+  billing:
+    billing.enable.db: 'true'
+
+  chimera:
+    chimera.db.url: 'jdbc:postgresql://localhost/chimera?prepareThreshold=3'
+    chimera.db.user: 'chimera'
+
+  dcache:
+    dcache.broker.host: 'dcache.fz-juelich.de'
+    dcache.enable.space-reservation: 'false'
+    dcache.layout: '${host.name}'
+    dcache.log.dir: '/var/log/dCache'
+    dcache.namespace: 'chimera'
+    dcache.upload-directory: '/pnfs/fz-juelich.de/data/upload'
+    dcache.user: 'dcache'
+
+  ftp:
+    ftp.limits.streams-per-client: '20'
+    ftp.performance-marker-period: '30'
+
+  gplazma:
+    gplazma.authzdb.uid: 'uid,login,group,user'
+
+  httpd:
+    httpd.authz.admin-gid: '22010'
+    httpd.enable.authn: 'true'
+    httpd.enable.plots.billing: 'true'
+    httpd.enable.plots.pool-queue: 'true'
+
+  info-provider:
+    info-provider.dcache-architecture: 'tape'
+    info-provider.http.host: 'dcache.fz-juelich.de'
+    info-provider.paths.tape-info: '/var/opt/dcache/tape-info.xml'
+    info-provider.se-name: 'dcache'
+    info-provider.se-unique-id: 'dcache.fz-juelich.de'
+    info-provider.site-unique-id: 'FZJ'
+
+  pnfsmanager:
+    pnfsmanager.enable.full-path-permission-check: 'false'
+
+  srm:
+    srm.enable.pin-online-files: 'false'
+    srm.limits.db.queue: '2000'
+    srm.limits.jetty-connector.acceptors: '12'
+    srm.limits.jetty.threads.max: '5000'
+    srm.limits.jetty.threads.queued.max: '1000'
+    srm.persistence.enable.clean-pending-on-restart: 'true'
+    srm.persistence.enable.history: 'true'
+    srm.persistence.enable: 'false'
+    srm.request.bring-online.retries: '2'
+    srm.request.bring-online.threads: '100'
+    srm.request.copy.retries: '2'
+    srm.request.put.retries: '2'
+    srm.request.put.threads: '100'
+    srm.request.retries: '2'
+    srm.request.threads: '100'
+
+tsm_files:   
+    - 'Endit.pm'
+    - 'check_restore_processes.py'
+    - 'clean_old_files.py'
+    - 'endit.pl'
+    - 'tsmarchiver.pl'
+    - 'tsmcleaning.pl'
+    - 'tsmdeleter.pl'
+    - 'tsmretriever.pl'
+
+endit_conf_lofar:
+  dir: '/lofar'
+  dirread: '/pool01'
+  dirwrite: '/pool02'
+  linkdir: '/lofar/DEFAULT/'
+  logdir: '/var/log/dcache/'
+  dcuser: 'dcache'
+  maxusage: '4096'
+  maxusageread: '1024'
+  pollinginterval: '300'
+  hsminstance: 'osm'
+  minusage: '100'
+  timeout: '5400'
+  dsmcopts: '-server=dcache -fromnode=DCACHE-LOFAR -password=S0meT$MPas$word'
+  dsmcnode: 'DCACHE-LOFAR'
+  dsmcpass: '=S0meT$MPas$word'
+  verbose: '1'
+  
+endit_conf_ildg:
+  dir: '/ildggrid'
+  dirread: '/pool01'
+  dirwrite: '/pool02'
+  linkdir: '/ildggrid/ildg001/'
+  logdir: '/var/log/dcache/'
+  dcuser: 'dcache'
+  maxusage: '4096'
+  maxusageread: '1024'
+  pollinginterval: '300'
+  hsminstance: 'osm'
+  minusage: '100'
+  timeout: '5400'
+  dsmcopts: '-server=dcache -fromnode=DCACHE-POOL -password==S0meT$MPas$word'
+  dsmcnode: 'DCACHE-POOL'
+  dsmcpass: '=S0meT$MPas$word'
+  verbose: '1'
+
+
+  

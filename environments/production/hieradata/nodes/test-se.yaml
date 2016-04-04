@@ -1,0 +1,182 @@
+mail_forward:
+  - o.tsigenov@fz-juelich.de
+
+resolv_conf: |
+ search zam.kfa-juelich.de kfa-juelich.de fz-juelich.de
+ nameserver 134.94.32.3
+ nameserver 134.94.32.4
+ nameserver 134.94.32.5
+
+ssh_pub_keys:
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAn98FaP3Gf11bLsghwdRhI8zoD2xRutZnIx09r9lvVN8Pw6t/LRGgCdDx4fo5UsGZyj2pSz8+xkUcWXvO2KIOuid2VaVpvzk7AECqwfVKsf4HWWxZZwH3v0T2NyOHaZtvRj8DRmMrjxiX2qMbC0QeIWE4Kk6QMQrBlUXkJhLHwcpfB77/BbsnbLymUlFe+Y9mSo9aRbhLdUlf0MTMRfCkfK3GtaRFic5xbvO7MJ3Ow2XSOFjYyqV5sIF+8gJVXNebjnC6ETgki0spD+xYmkX5gqhf1oBnI8lpp3q5Lv4H6+mBp0J4d5eCQGzS8YcgIHPNzZfDQ6OYms8SXRL0w8qywQ== manzano@zam360'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNntzpUv0OB5NytgjrsGZLiY3RtH0JscxDiCiwITZno1wMMBc+2k7m1IoH2o6q3GzTukAh7AstsOkTVHRZa4QfinRr4orN7NIlZMbNPBFQr6ZH5swNJ+hIMY6J6CfIWnO4Z/2pUwVccDODpzSwANxIKSQu7TUk4cjpv6knCteOVyv1OF0fWcxDzixAhE+I/O7x18aHYcr9apYZjYvmnfJhsi8G3yMDFKUQxudPoGmoX3AMHu9rvori5+xm+eJ+rwhjE0SzRQwyRuELiY6YOsVH7ayyRg1Mtjx/AKPOzErf+mnUIlyztfOcFeeHK6dwylJ/avRb5SeXK/IsxuE9l+2t manzano@zam565'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVTvKg8GxeIo2ULHGPT/BZKo3of5N1Eus0d16ychOVTolsp0GnPU4WAcyhy2cOewwsdeRAow3zRpRwPSeGppGIsO1vaFjZZ6kn6CMMasjAv20L+q6HXjWnq2uqYauXwyjLXbZ7CVoWMSs57X6bQwhebYaCd8/aa345weLd35At+vb6slw0xaaMG08Oks2X4UbGzkS2RbAU+KPra9aF2GadrQO9op78YICQi7sfteR6AvL9d1vuQ/s5aBGp568TzqHZ2DChVv7kI4szXSl4/pMA6tUdJZCJ5Ta0gMwHnYXroBna0uPTyeMPYXPjeitxvewIRe1xL6C29nH848DvdbJ7 georg@zam986'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6DT3HhmWk0M1jp6Szx9V+FwWG0cBQOsOEjVDHXAtOO5Ry0U6+4+4E24j4fWBuCo9YP7ys8Q7e7vcuIM4BwZd81pVxGXdt32exYxhFNS46Ap1FMuEyxh7J7EUXfBnKjEHyFBqXXS2+c3+BzoXeAXKpbv47kefR84XkXoZmsHzjMDUfJN+Y6WEaP/Dth10w9tViDYfjjZI6kxrBdROHNaOb1ksejP0HDKXmkNlVvdFWW3UswRipxlrNgwJMxuisi97oO2OD1BfP28ZQHa82/4MzvTzf6obr1GBkCT0Xp6Y1+fkSMtN1y6XTcKeKgghKWOPJclRuMJTwskf8NuEsN5wl tsio@zam1181'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEArj5x0dwH8s1ggJYzMyB5wbmsgOa6ZDmnTqdV1watFM3GFHG+98OyG+1d/TFQ18bXUi5gRmV3lJLM2uPNJ9mzwM+DEPETWuo1MsWj5VbrEVPKin6CFF/uF9Jb5p4Ui0jVlk6vikpmWWXKX7L2+6cRm+jwQ2wzvIRJhp1EFKNwG+M= zdv021@zam484'
+  - 'ssh-dss AAAAB3NzaC1kc3MAAACBAKP1lmCQXbKzTANQ8+fn1oiiOt5HhvsKxq2jwiamu+OYMoWUimaTp4gHQ45ErvAJKpmQFMvzZ4ZDG+WSmVidmOb6GF1Dmw1M/3hp7D1y00XH0K0NcPvjeKcrXSIyqWLB2e0ZxNAhWct203fnXHXJTqOj0/fmZ8qrps+Y/hd/IZqNAAAAFQD2Bd49xyFUQDtHqTdn5WGRWLbeIwAAAIAb6WWyfU3HEWY7vk/TS9Ut/rmU/e7GZE7L/IzdxdXfYCu13tP9WoDOJmjNSATEXC2O75bJJNCJ2TkpwtexSleZwDs8Dy1Oh0vvpK5WuOFqaO3F0s8tKVE59sqyrMN+LSCC9DpaBa67m+uFEw6+G0/uiy1dBwVWtdXD+xKvQj1m5QAAAIBgbp5VYJZG/wiawvsYVIpRILtxsHemYl2FutIOcKnkCzexQirkZnJhPQjP5gJ90Xm4sRhdbfrNF52RDP+e2tJI8hT79oNiYnTtCYsUqOYegbbUQx1LFXAFSkz4SOiikNoxt/mFDW4iTlgIb1VdrLrjCiu06lu6up6EUQIwqmflKg== tsio@zam1181'
+  
+dc_ssh_pub_keys:
+  - 'ssh-dss AAAAB3NzaC1kc3MAAACBAMbCOCjIh9bGLl7bsh6xv4qFQhhHLR5ciMWdxKEyXgYRZwz1XjR5WSdlbDGuoVGuzLZaKfpAlLguyHtTBL52ZWHlO7MxlSupTRLTchPf5ArM232kkDQZgD53cHa1QzOo18h/EIm2GFAaAnkexvOoeFZD1JHXhjlCil8kCIVim/P/AAAAFQCGe/mgUktclTDUf0xkTkr53ofE4QAAAIEAoMO84g2jLebcZdY1hBtZoV/7JqghfQHO2QWFvj/8wU6fdl0uH1cbt3GwzWTk9CLU/rUpOLFiRXD5jiEU9DcI0/xC9T0x9qG52Sa1WGwbgjaAdu2cyVAOf2jNUZMgDdRrBV3jPRqu8Rup8peYXjuEVYIuSKzCkQOGKXReLdndWlUAAACATQcPty8xwFfLaav9NpEa5fERWAOASK3wUdTUCuuoZJhKpRqDOjSQStSqe4Efm/ql5hhMjmRdWIAHb2sZ7Lh022qxqo5X9O9hpXKr/ccC/VSHLusOpadFJep0eLhKiv2+SWkpL4DFKDmANSiK/YUiNAkiEiHwbr9NPnwcZ4o7njE= root@dcache-lofar.fz-juelich.de'
+  - 'ssh-dss AAAAB3NzaC1kc3MAAACBAKP1lmCQXbKzTANQ8+fn1oiiOt5HhvsKxq2jwiamu+OYMoWUimaTp4gHQ45ErvAJKpmQFMvzZ4ZDG+WSmVidmOb6GF1Dmw1M/3hp7D1y00XH0K0NcPvjeKcrXSIyqWLB2e0ZxNAhWct203fnXHXJTqOj0/fmZ8qrps+Y/hd/IZqNAAAAFQD2Bd49xyFUQDtHqTdn5WGRWLbeIwAAAIAb6WWyfU3HEWY7vk/TS9Ut/rmU/e7GZE7L/IzdxdXfYCu13tP9WoDOJmjNSATEXC2O75bJJNCJ2TkpwtexSleZwDs8Dy1Oh0vvpK5WuOFqaO3F0s8tKVE59sqyrMN+LSCC9DpaBa67m+uFEw6+G0/uiy1dBwVWtdXD+xKvQj1m5QAAAIBgbp5VYJZG/wiawvsYVIpRILtxsHemYl2FutIOcKnkCzexQirkZnJhPQjP5gJ90Xm4sRhdbfrNF52RDP+e2tJI8hT79oNiYnTtCYsUqOYegbbUQx1LFXAFSkz4SOiikNoxt/mFDW4iTlgIb1VdrLrjCiu06lu6up6EUQIwqmflKg== tsio@zam1181'
+  - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCHTaAWjvrxVXZwfSMN7XKqg4In5vCWvu1khha2jrDeqWLw6rX4KV3XTuSViFLPF4jsSo0iZm2PMBWfYd7kqUZQnnCvoUpvY8uY5fPOTlgzIpePQVKi/qG+kwubO1FiR94QtTKC33eWB7oSdgaE+TJBaYAOcBq5jFN3lEYVpye8SyE5aTDm0jtL8CNEBVG3fHAhXHjDRSK1aEh2Ws/GhZuMFRlZku4Icxo938Jt36vqZQopmnBC5xCFBmWN0D4/39n8H++4zGdjauAd8lqeB2UDE+EUcdpQ27ijvh1m/OOGygC67S9mNY4Ht6V2d2jCoyplAysqadE5NWdjQSHOijR manzano@zam1093-dcache'
+
+dcache_layout:
+  globals: 
+    'dcache.java.memory.heap': '2048m'
+    'dcache.java.memory.direct': '1024m'
+  domains:
+    dCacheDomain:
+      poolmanager: 
+      broadcast:  
+      loginbroker: 
+      topo: 
+    dirDomain:
+      dir:
+    adminDoorDomain:
+      admin:
+    httpdDomain:
+      httpd:
+      billing:
+    utilityDomain:
+      pinmanager:
+    gPlazma-dcache-lofarDomain:
+      gplazma:
+
+    namespaceDomain:
+      pnfsmanager: 
+         pnfsmanager.enable.acl: 'true'
+      cleaner:
+
+    statisticsDomain:
+      statistics:
+
+    nfsDomain:
+      domainsettings: 
+        dcache.java.memory.heap: '4096m'
+      nfs:
+        nfs.version: '4.1'
+
+    srm-dcache-lofarDomain:
+      srm:
+      transfermanagers:
+    infoDomain:
+      info:
+
+    gridftpDomain:
+      domainsettings:
+        dcache.java.memory.heap: '8192m'
+        dcache.java.memory.direct: '2048m'
+        dcache.java.options.extra: ' -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${dcache.log.dir} -d64'
+      ftp:
+        ftp.authn.protocol:  gsi
+        ftp.net.port: '2811'
+        ftp.cell.name: 'GFTP-${host.name}'
+
+
+    01Domain: 
+      pool:
+        pool.name: '${host.name}_01'
+        pool.path: '/pool01/pool'
+        pool.size: '27T'
+        pool.plugins.meta: 'org.dcache.pool.repository.meta.db.BerkeleyDBMetaDataRepository'
+        pool.wait-for-files: '${pool.path}/data:${pool.path}/meta'
+        pool.lfs: 'none'
+        pool.tags: 'hostname=${host.name}'
+
+    02Domain: 
+      pool:
+        pool.name: '${host.name}_02'
+        pool.path: '/pool02/pool'
+        pool.size: '27T'
+        pool.plugins.meta: 'org.dcache.pool.repository.meta.db.BerkeleyDBMetaDataRepository'
+        pool.wait-for-files: '${pool.path}/data:${pool.path}/meta'
+        pool.lfs: 'none'
+        pool.tags: 'hostname=${host.name}'
+
+
+pools_setup:
+  '${host.name}_01':
+     setup: |
+       #
+       # Created by dcachepool15_02(Pool) at Mon Jul 20 09:03:34 CEST 2015
+       #
+       csm set checksumtype ADLER32
+       csm set policy -scrub=off
+       csm set policy -onread=off -onwrite=off -onflush=off -onrestore=off -ontransfer=on -enforcecrc=on -getcrcfromhsm=off
+       #
+       # Flushing Thread setup
+       #
+       flush set max active 1000
+       flush set interval 60
+       flush set retry delay 60
+       #
+       # Nearline storage
+       #
+       hsm create osm osm script -command=/opt/endit/endit.pl -c:gets=0 -c:puts=5 -c:removes=1
+       jtm set timeout -queue=regular -lastAccess=3600 -total=86400
+       jtm set timeout -queue=p2p -lastAccess=3600 -total=86400
+       jtm set timeout -queue=io -lastAccess=3600 -total=86400
+       #
+       # MigrationModule
+       #
+       set heartbeat 30
+       set report remove on
+       set breakeven 0.5
+       set mover cost factor 0.1
+       set gap 322122547200
+       set duplicate request none
+       mover set max active -queue=regular 100
+       mover set max active -queue=p2p 10
+       #
+       #  Pool to Pool (P2P) [$Revision$]
+       #
+       pp set max active 10
+       pp set pnfs timeout 300
+       set max diskspace 25288767438848
+       rh set timeout 691200
+       st set timeout 172800
+       rm set timeout 14400
+
+  '${host.name}_02':
+     setup: |
+       #
+       # Created by dcachepool15_02(Pool) at Mon Jul 20 09:03:34 CEST 2015
+       #
+       csm set checksumtype ADLER32
+       csm set policy -scrub=off
+       csm set policy -onread=off -onwrite=off -onflush=off -onrestore=off -ontransfer=on -enforcecrc=on -getcrcfromhsm=off
+       #
+       # Flushing Thread setup
+       #
+       flush set max active 1000
+       flush set interval 60
+       flush set retry delay 60
+       #
+       # Nearline storage
+       #
+       hsm create osm osm script -command=/opt/endit/endit.pl -c:gets=0 -c:puts=5 -c:removes=1
+       jtm set timeout -queue=regular -lastAccess=3600 -total=86400
+       jtm set timeout -queue=p2p -lastAccess=3600 -total=86400
+       jtm set timeout -queue=io -lastAccess=3600 -total=86400
+       #
+       # MigrationModule
+       #
+       set heartbeat 30
+       set report remove on
+       set breakeven 0.5
+       set mover cost factor 0.1
+       set gap 322122547200
+       set duplicate request none
+       mover set max active -queue=regular 100
+       mover set max active -queue=p2p 10
+       #
+       #  Pool to Pool (P2P) [$Revision$]
+       #
+       pp set max active 10
+       pp set pnfs timeout 300
+       set max diskspace 25288767438848
+       rh set timeout 691200
+       st set timeout 172800
+       rm set timeout 14400
+
+       

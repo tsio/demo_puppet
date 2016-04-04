@@ -1,0 +1,56 @@
+:hierarchy:
+    - "environments/%{environment}/modules/%{module_name}/hieradata"
+    - "environments/%{environment}/modules/%{module_name}/hieradata/%{module_name}/%{fqdn}"
+    - "environments/%{environment}/modules/%{module_name}/hieradata/%{module_name}"
+    - "environments/%{environment}/modules/%{module_name}/hieradata"
+    - "environments/%{environment}/hieradata/%{module_name}/%{::hostname}"
+    - "environments/%{environment}/hieradata/%{module_name}/common"
+    - "environments/%{environment}/hieradata/nodes/%{::hostname}"
+    - "environments/%{environment}/hieradata/common"
+
+
+#:hierarchy:
+#    - "%{environment}/nodes/%{fqdn}/%{hostname}/%{calling_class}/%{title}"
+#    - "%{environment}/nodes/%{fqdn}/%{::clientcert}"
+#    - "environment/%{environment}/nodes/%{::hostname}"
+#    - "environment/%{environment}/roles"
+#    - "environment/%{environment}/%{environment}"
+#    - "modules/%{module_name}/hieradata"
+#    - "modules/%{module_name}/hieradata/%{module_name}/%{fqdn}"
+#    - "modules/%{module_name}/hieradata/%{module_name}"
+#    - "modules/%{module_name}/hieradata"
+#    - "hieradata/common"
+
+#    - environments/%{environment}/data/fqdn/%{fqdn}
+#    - environments/%{environment}/data/osfamily/%{osfamily}/%{lsbdistcodename}
+#    - environments/%{environment}/data/osfamily/%{osfamily}/%{lsbmajdistrelease}
+#    - environments/%{environment}/data/osfamily/%{osfamily}/%{architecture}
+#    - environments/%{environment}/data/osfamily/%{osfamily}/common
+#    - environments/%{environment}/data/modules/%{cname}
+#    - environments/%{environment}/data/modules/%{caller_module_name}
+#    - environments/%{environment}/data/modules/%{module_name}
+#    - environments/%{environment}/data/common
+
+:backends:
+    - yaml
+:yaml:
+     :datadir: "/vagrant_data/demo_puppet/"
+#    :datadir: "/etc/puppet/"
+
+
+
+#    - environments/%{environment}/data/fqdn/%{fqdn}
+#    - environments/%{environment}/data/osfamily/%{osfamily}/%{lsbdistcodename}
+#    - environments/%{environment}/data/osfamily/%{osfamily}/%{lsbmajdistrelease}
+#    - environments/%{environment}/data/osfamily/%{osfamily}/%{architecture}
+#    - environments/%{environment}/data/osfamily/%{osfamily}/common
+#    - environments/%{environment}/data/modules/%{cname}
+#    - environments/%{environment}/data/modules/%{caller_module_name}
+#    - environments/%{environment}/data/modules/%{module_name}
+#    - environments/%{environment}/data/common
+#
+#:backends:
+#    - yaml
+#:yaml:
+#    :datadir: "/etc/puppet/"
+
