@@ -1,13 +1,26 @@
-mail_forward:
-  - o.tsigenov@fz-juelich.de
-  - c.manzano@fz-juelich.de
-
-resolv_conf: |
- search fz-juelich.de
- nameserver 134.94.32.3
- nameserver 134.94.32.4
- nameserver 134.94.32.5
-
+pg_hba_rules:
+    'local all is for Unix domain socket connections only:':
+        type: local
+        database: all
+        user: all
+        auth_method: 'trust'
+        order: '001'
+    'IPv4 local connections:':
+        type: host
+        database: all
+        user: all
+        auth_method: 'trust'
+        address: '127.0.0.1/32'
+        order: '002'
+    'IPv6 local connections:':
+        type: host
+        database: all
+        user: all
+        auth_method: 'trust'
+        address: '::1/128'
+        order: '003'
+ 
+ 
 ssh_pub_keys:
   - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAn98FaP3Gf11bLsghwdRhI8zoD2xRutZnIx09r9lvVN8Pw6t/LRGgCdDx4fo5UsGZyj2pSz8+xkUcWXvO2KIOuid2VaVpvzk7AECqwfVKsf4HWWxZZwH3v0T2NyOHaZtvRj8DRmMrjxiX2qMbC0QeIWE4Kk6QMQrBlUXkJhLHwcpfB77/BbsnbLymUlFe+Y9mSo9aRbhLdUlf0MTMRfCkfK3GtaRFic5xbvO7MJ3Ow2XSOFjYyqV5sIF+8gJVXNebjnC6ETgki0spD+xYmkX5gqhf1oBnI8lpp3q5Lv4H6+mBp0J4d5eCQGzS8YcgIHPNzZfDQ6OYms8SXRL0w8qywQ== manzano@zam360'
   - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNntzpUv0OB5NytgjrsGZLiY3RtH0JscxDiCiwITZno1wMMBc+2k7m1IoH2o6q3GzTukAh7AstsOkTVHRZa4QfinRr4orN7NIlZMbNPBFQr6ZH5swNJ+hIMY6J6CfIWnO4Z/2pUwVccDODpzSwANxIKSQu7TUk4cjpv6knCteOVyv1OF0fWcxDzixAhE+I/O7x18aHYcr9apYZjYvmnfJhsi8G3yMDFKUQxudPoGmoX3AMHu9rvori5+xm+eJ+rwhjE0SzRQwyRuELiY6YOsVH7ayyRg1Mtjx/AKPOzErf+mnUIlyztfOcFeeHK6dwylJ/avRb5SeXK/IsxuE9l+2t manzano@zam565'
@@ -38,18 +51,17 @@ dcache:
        - webdav 
        - srm
        
-dcache_version: '2.13.28-1'
+dcache_version: '2.10.58-1'
 
-dcache_conf_lofar:
+dcache_conf:
   dcache: 
     dcache.log.dir: '/var/log/dcache'
     dcache.layout    : '${host.name}'
     dcache.namespace : 'chimera'
-    dcache.broker.host  : 'dcache-lofar.fz-juelich.de'
-    dcache.upload-directory : '/pnfs/fz-juelich.de/data/upload'
+    dcache.upload-directory : '/data/upload'
     dcache.enable.space-reservation : 'false'
     dcache.user : 'dcache'
-    dcache.paths.billing: '/data/billing'
+    dcache.paths.billing: '/var/log/data/billing'
     
   chimera:
     chimera.db.user  : 'chimera'
@@ -75,18 +87,18 @@ dcache_conf_lofar:
     httpd.authz.admin-gid : '500'
 
   info-provider:
-    info-provider.site-unique-id : 'FZJ'
-    info-provider.se-unique-id : 'dcache-lofar.fz-juelich.de'
-    info-provider.se-name : 'Juelich LOFAR dCache'
+    info-provider.site-unique-id : 'DEMO'
+    info-provider.se-unique-id : 'puppet-dcache-demo'
+    info-provider.se-name : 'Demo puppet dCache'
     info-provider.dcache-architecture : 'tape'
     info-provider.paths.tape-info : '/var/opt/dcache/tape-info.xml'
-    info-provider.http.host : 'dcache-lofar.fz-juelich.de'
+    info-provider.http.host : 'localhost.localdomain'
 
   srm:
     srm.enable.pin-online-files : 'false'
     srm.persistence.enable.history  : 'true'
-    srm.net.local-hosts : 'dcache-lofar.fz-juelich.de,lofar-srm.fz-juelich.de'
-    srm.net.host : 'dcache-lofar.fz-juelich.de'                                                                                                                              
+    srm.net.local-hosts : 'localhost.localdomain'
+    srm.net.host : 'localhost.localdomain'                                                                                                                              
     srm.limits.jetty-connector.acceptors : '8'
     srm.limits.jetty.threads.max : '5000'
     srm.limits.jetty.threads.queued.max : '1000'
@@ -122,6 +134,167 @@ dcache_conf_lofar:
   transfermanagers:
     transfermanagers.db.name: 'dcache'
     transfermanagers.db.user:  'srmdcache'
+
+
+dcache_layout:
+  globals: 
+    'dcache.java.memory.heap': '2048m'
+    'dcache.java.memory.direct': '1024m'
+  domains:
+    dCacheDomain:
+      poolmanager: 
+      broadcast:  
+      loginbroker: 
+      topo: 
+    dirDomain:
+      dir:
+    adminDoorDomain:
+      admin:
+    httpdDomain:
+      httpd:
+      billing:
+    utilityDomain:
+      pinmanager:
+    gPlazma-dcache-lofarDomain:
+      gplazma:
+
+    namespaceDomain:
+      pnfsmanager: 
+         pnfsmanager.enable.acl: 'true'
+      cleaner:
+
+    statisticsDomain:
+      statistics:
+
+    nfsDomain:
+      domainsettings: 
+        dcache.java.memory.heap: '4096m'
+      nfs:
+        nfs.version: '4.1'
+
+    srm-dcache-lofarDomain:
+      srm:
+      transfermanagers:
+    infoDomain:
+      info:
+
+    gridftpDomain:
+      domainsettings:
+        dcache.java.memory.heap: '8192m'
+        dcache.java.memory.direct: '2048m'
+        dcache.java.options.extra: ' -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${dcache.log.dir} -d64'
+      ftp:
+        ftp.authn.protocol:  gsi
+        ftp.net.port: '2811'
+        ftp.cell.name: 'GFTP-${host.name}'
+
+
+    01Domain: 
+      pool:
+        pool.name: '${host.name}_01'
+        pool.path: '/pool01/pool'
+        pool.size: '27T'
+        pool.plugins.meta: 'org.dcache.pool.repository.meta.db.BerkeleyDBMetaDataRepository'
+        pool.wait-for-files: '${pool.path}/data:${pool.path}/meta'
+        pool.lfs: 'none'
+        pool.tags: 'hostname=${host.name}'
+
+    02Domain: 
+      pool:
+        pool.name: '${host.name}_02'
+        pool.path: '/pool02/pool'
+        pool.size: '27T'
+        pool.plugins.meta: 'org.dcache.pool.repository.meta.db.BerkeleyDBMetaDataRepository'
+        pool.wait-for-files: '${pool.path}/data:${pool.path}/meta'
+        pool.lfs: 'none'
+        pool.tags: 'hostname=${host.name}'
+
+
+pools_setup_1:
+  '${host.name}_01':
+     setup: |
+       #
+       # Created by dcachepool15_02(Pool) at Mon Jul 20 09:03:34 CEST 2015
+       #
+       csm set checksumtype ADLER32
+       csm set policy -scrub=off
+       csm set policy -onread=off -onwrite=off -onflush=off -onrestore=off -ontransfer=on -enforcecrc=on -getcrcfromhsm=off
+       #
+       # Flushing Thread setup
+       #
+       flush set max active 1000
+       flush set interval 60
+       flush set retry delay 60
+       #
+       # Nearline storage
+       #
+       hsm create osm osm script -command=/opt/endit/endit.pl -c:gets=0 -c:puts=5 -c:removes=1
+       jtm set timeout -queue=regular -lastAccess=3600 -total=86400
+       jtm set timeout -queue=p2p -lastAccess=3600 -total=86400
+       jtm set timeout -queue=io -lastAccess=3600 -total=86400
+       #
+       # MigrationModule
+       #
+       set heartbeat 30
+       set report remove on
+       set breakeven 0.5
+       set mover cost factor 0.1
+       set gap 322122547200
+       set duplicate request none
+       mover set max active -queue=regular 100
+       mover set max active -queue=p2p 10
+       #
+       #  Pool to Pool (P2P) [$Revision$]
+       #
+       pp set max active 10
+       pp set pnfs timeout 300
+       set max diskspace 25288767438848
+       rh set timeout 691200
+       st set timeout 172800
+       rm set timeout 14400
+
+  '${host.name}_02':
+     setup: |
+       #
+       # Created by dcachepool15_02(Pool) at Mon Jul 20 09:03:34 CEST 2015
+       #
+       csm set checksumtype ADLER32
+       csm set policy -scrub=off
+       csm set policy -onread=off -onwrite=off -onflush=off -onrestore=off -ontransfer=on -enforcecrc=on -getcrcfromhsm=off
+       #
+       # Flushing Thread setup
+       #
+       flush set max active 1000
+       flush set interval 60
+       flush set retry delay 60
+       #
+       # Nearline storage
+       #
+       hsm create osm osm script -command=/opt/endit/endit.pl -c:gets=0 -c:puts=5 -c:removes=1
+       jtm set timeout -queue=regular -lastAccess=3600 -total=86400
+       jtm set timeout -queue=p2p -lastAccess=3600 -total=86400
+       jtm set timeout -queue=io -lastAccess=3600 -total=86400
+       #
+       # MigrationModule
+       #
+       set heartbeat 30
+       set report remove on
+       set breakeven 0.5
+       set mover cost factor 0.1
+       set gap 322122547200
+       set duplicate request none
+       mover set max active -queue=regular 100
+       mover set max active -queue=p2p 10
+       #
+       #  Pool to Pool (P2P) [$Revision$]
+       #
+       pp set max active 10
+       pp set pnfs timeout 300
+       set max diskspace 25288767438848
+       rh set timeout 691200
+       st set timeout 172800
+       rm set timeout 14400
+
 
 
 dcache_conf_ildg:

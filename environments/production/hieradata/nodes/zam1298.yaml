@@ -3,20 +3,20 @@ pg_hba_rules:
         type: local
         database: all
         user: all
-        auth_method: trust
+        auth_method: 'trust'
         order: '001'
     'IPv4 local connections:':
         type: host
         database: all
         user: all
-        auth_method: trust
+        auth_method: 'trust'
         address: '127.0.0.1/32'
         order: '002'
     'IPv6 local connections:':
         type: host
         database: all
         user: all
-        auth_method: trust
+        auth_method: 'trust'
         address: '::1/128'
         order: '003'
  
