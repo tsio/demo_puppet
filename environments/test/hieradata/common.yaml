@@ -205,7 +205,7 @@ endit_conf_lofar:
   hsminstance: 'osm'
   minusage: '100'
   timeout: '5400'
-  dsmcopts: '-server=dcache -fromnode=DCACHE-LOFAR -password=S0meT$MPas$word'
+  dsmcopts: '-server=dcache -fromnode=DCACHE-LOFAR -password==S0meT$MPas$word'
   dsmcnode: 'DCACHE-LOFAR'
   dsmcpass: '=S0meT$MPas$word'
   verbose: '1'
