@@ -364,9 +364,9 @@ endit_conf_lofar:
   hsminstance: 'osm'
   minusage: '100'
   timeout: '5400'
-  dsmcopts: '-server=dcache -fromnode=DCACHE-LOFAR -password==S0meT$MPas$word'
+  dsmcopts: '-server=dcache -fromnode=DCACHE-LOFAR -password=****pw****'
   dsmcnode: 'DCACHE-LOFAR'
-  dsmcpass: '=S0meT$MPas$word'
+  dsmcpass: '****pw****'
   verbose: '1'
   
 endit_conf_ildg:
@@ -382,9 +382,9 @@ endit_conf_ildg:
   hsminstance: 'osm'
   minusage: '100'
   timeout: '5400'
-  dsmcopts: '-server=dcache -fromnode=DCACHE-POOL -password==S0meT$MPas$word'
+  dsmcopts: '-server=dcache -fromnode=DCACHE-POOL -password=****pw****'
   dsmcnode: 'DCACHE-POOL'
-  dsmcpass: '=S0meT$MPas$word'
+  dsmcpass: '****pw****'
   verbose: '1'
 
 poolmanager_cfg_hash:
