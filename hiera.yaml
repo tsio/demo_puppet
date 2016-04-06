@@ -1,11 +1,4 @@
 :hierarchy:
-    - "environments/%{environment}/modules/%{module_name}/hieradata"
-    - "environments/%{environment}/modules/%{module_name}/hieradata/%{module_name}/%{fqdn}"
-    - "environments/%{environment}/modules/%{module_name}/hieradata/%{module_name}"
-    - "environments/%{environment}/modules/%{module_name}/hieradata"
-    - "environments/%{environment}/hieradata/%{module_name}/%{::hostname}"
-    - "environments/%{environment}/hieradata/%{module_name}/common"
-    - "environments/%{environment}/hieradata/nodes/%{::hostname}"
     - "environments/%{environment}/hieradata/common"
 
 

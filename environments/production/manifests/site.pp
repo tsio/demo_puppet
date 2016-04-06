@@ -47,6 +47,7 @@ node 'localhost.localdomain' {
     user     => 'chimera',
     password => undef,
   }
+
   postgresql::server::role { 'srmdcache': } ->
   postgresql::server::db { 'dcache':
     owner    => 'srmdcache',
@@ -63,16 +64,14 @@ node 'localhost.localdomain' {
     package_ensure => hiera('dcache_version'),
     conf           => hiera('dcache_conf', 'nodeff'),
     admin_ssh_keys => hiera('dc_ssh_pub_keys', 'nodeff'),
+    layout         => hiera('dcache_layout', 'nodeff'),
+    pools_setup    => hiera('pools_setup', 'nodeff'),
     require        => [
       Package['java-1.8.0-openjdk'],
       Postgresql::Server::Db['billing'],
       Postgresql::Server::Db['chimera'],
       Postgresql::Server::Db['dcache'],
       Class['postgresql::server']]
-  } ->
-  class { 'dcache::layout':
-    layout_hash => hiera('dcache_layout', 'nodeff'),
-    p_setup     => hiera('pools_setup', 'nodeff'),
   }
 
   package { 'java-1.8.0-openjdk': ensure => 'installed', }

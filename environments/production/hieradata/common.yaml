@@ -20,24 +20,18 @@ pg_hba_rules:
         address: '::1/128'
         order: '003'
  
- 
 ssh_pub_keys:
   - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAn98FaP3Gf11bLsghwdRhI8zoD2xRutZnIx09r9lvVN8Pw6t/LRGgCdDx4fo5UsGZyj2pSz8+xkUcWXvO2KIOuid2VaVpvzk7AECqwfVKsf4HWWxZZwH3v0T2NyOHaZtvRj8DRmMrjxiX2qMbC0QeIWE4Kk6QMQrBlUXkJhLHwcpfB77/BbsnbLymUlFe+Y9mSo9aRbhLdUlf0MTMRfCkfK3GtaRFic5xbvO7MJ3Ow2XSOFjYyqV5sIF+8gJVXNebjnC6ETgki0spD+xYmkX5gqhf1oBnI8lpp3q5Lv4H6+mBp0J4d5eCQGzS8YcgIHPNzZfDQ6OYms8SXRL0w8qywQ== manzano@zam360'
   - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNntzpUv0OB5NytgjrsGZLiY3RtH0JscxDiCiwITZno1wMMBc+2k7m1IoH2o6q3GzTukAh7AstsOkTVHRZa4QfinRr4orN7NIlZMbNPBFQr6ZH5swNJ+hIMY6J6CfIWnO4Z/2pUwVccDODpzSwANxIKSQu7TUk4cjpv6knCteOVyv1OF0fWcxDzixAhE+I/O7x18aHYcr9apYZjYvmnfJhsi8G3yMDFKUQxudPoGmoX3AMHu9rvori5+xm+eJ+rwhjE0SzRQwyRuELiY6YOsVH7ayyRg1Mtjx/AKPOzErf+mnUIlyztfOcFeeHK6dwylJ/avRb5SeXK/IsxuE9l+2t manzano@zam565'
   - 'ssh-dss AAAAB3NzaC1kc3MAAACBALRBHBZleIYSkLEqItIKWR6UEDN308jKa96v1p98dsYjlvBBEjUIvxuyljX6Uy7Yo4oKuTfXiXIUltMkHh4546VhJFyt8COGbx43xA7Hb0I9A1/VyZo3/3XOmeH3QE9b8eDRzCsyqglY+CIHbsdNBFx0KSdp7aG8DowxGkiLG23pAAAAFQCRlmSpJuxcdWpCSwMzsU6222MbTwAAAIA8cRfH6AIpbVlEUthRjcz4cvEFZzmMIbJxrenisrbOqXME3T+N5sh98y8cALH5b/V+sck0rtHPg1aVDu+/tuOaR+AXaC8ZtgRPJpxj2F/8pOlGBal4za7p5HBpWKDql+3XeQaQolUhlFKw62Rf2Ow2Quh9bkpJI2O7+z2fPoYfmAAAAIAqi5uPcXx0KuluCF/g+ecU31VrsX985uJN2OUpPXjgFM2fkbA/vvu/eCrpLyGx1CqfBSbEzPXPM+01Tz3PETrIgtwLp1Aeb+N/f8ifl8iZxK/e/xPHsx5gYsIJRfuTcWRHi/oFD2/bNHPUAk39zUhzi2rpMbhFUCAzBMq3harDWw== beratung@zam480'
-  - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEA7ZxQ1K7E1LO/MUqdk9qJoE5QMRrqX7fGswWkpgk925g6sAKXs8b8fzoUtNy/6hgFiHuxf/2jHT1fvnGvT76PXAV+Qmi4oUPXbbhzkWJC/r14BoNyUq7yMbFb3DmPGYS9AcX3xo6a0gx+pwNQajdReFJIW0kX4K5Jn1TweJ4g2BM= beratung@zam480'
-  - 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAxRKYjwSxnFGPds173dVUMBLdDJuCn/lY1zz0mrV8XM0LvCMMXysOUUoqgs2c1OJedxV7vSb4aCwOeVmgNR0Y3ib2SsMvxz3QiwTbk2j/pGeTlPdcLTQVdrRX3yBr+4e7DDNxldrLWdNbao2z5ZLUWquAA5qyGLuVf+ggmXrs+3E= o.mextorf@fz-juelich.de'
-  - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAxyZsqpDNTFxcqqlQwbwyt7zi1SJkrLRcreBZeR/jjF2Br+doa/05lvXIOMob29gywobwYiX45jjoHJU/s499kAi0+dohBpjzGWDlT991pEK0X6hEMBbh50lYMpwF3tHe1xdm136xJdv2D/sbKUVoRuP0pWFJznppGdq3xIs3exU= zdv098@zam545'
-  - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6DT3HhmWk0M1jp6Szx9V+FwWG0cBQOsOEjVDHXAtOO5Ry0U6+4+4E24j4fWBuCo9YP7ys8Q7e7vcuIM4BwZd81pVxGXdt32exYxhFNS46Ap1FMuEyxh7J7EUXfBnKjEHyFBqXXS2+c3+BzoXeAXKpbv47kefR84XkXoZmsHzjMDUfJN+Y6WEaP/Dth10w9tViDYfjjZI6kxrBdROHNaOb1ksejP0HDKXmkNlVvdFWW3UswRipxlrNgwJMxuisi97oO2OD1BfP28ZQHa82/4MzvTzf6obr1GBkCT0Xp6Y1+fkSMtN1y6XTcKeKgghKWOPJclRuMJTwskf8NuEsN5wl tsio@zam1181'
   
 common_pkgs:
   - 'java-1.8.0-openjdk'
 
-common_pkgs_5:
-  - 'jre1.8.0_73.x86_64'  
-
-       
+      
 dcache_version: '2.10.58-1'
+#dcache_version: '2.13.28-1'
+
 
 dcache_conf:
   dcache: 
@@ -124,21 +118,21 @@ dcache_conf:
 
 dcache_layout:
   globals: 
-    'dcache.java.memory.heap': '2048m'
-    'dcache.java.memory.direct': '1024m'
+    'dcache.java.memory.heap': '512m'
+    'dcache.java.memory.direct': '512m'
   domains:
     dCacheDomain:
       poolmanager: 
       broadcast:  
       loginbroker: 
       topo: 
+
     dirDomain:
       dir:
+
     adminDoorDomain:
       admin:
-    httpdDomain:
-      httpd:
-      billing:
+
     utilityDomain:
       pinmanager:
     gPlazma-dcache-lofarDomain:
@@ -154,20 +148,14 @@ dcache_layout:
 
     nfsDomain:
       domainsettings: 
-        dcache.java.memory.heap: '4096m'
+        dcache.java.memory.heap: '256m'
       nfs:
         nfs.version: '4.1'
 
-    srm-dcache-lofarDomain:
-      srm:
-      transfermanagers:
-    infoDomain:
-      info:
-
     gridftpDomain:
       domainsettings:
-        dcache.java.memory.heap: '8192m'
-        dcache.java.memory.direct: '2048m'
+        dcache.java.memory.heap: '512m'
+        dcache.java.memory.direct: '256m'
         dcache.java.options.extra: ' -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${dcache.log.dir} -d64'
       ftp:
         ftp.authn.protocol:  gsi
