@@ -1,6 +1,6 @@
 class dcache::layout  (
   $l_file = "${dcache::dcache_etc_dir}/layouts/${hostname}.conf",
-  $layout_hash = 'nodeff',
+  $layout_hash = 'nodef',
   $p_setup='nodef',
    ) {
     
@@ -10,7 +10,7 @@ class dcache::layout  (
     }
 #   notice($admin_ssh_keys )
     
-    if deep_has_key($layout_hash, 'admin') and $dcache::admin_ssh_keys  != 'nodeff' {
+    if deep_has_key($layout_hash, 'admin') and $dcache::admin_ssh_keys  != 'nodef' {
   
       file { '/etc/dcache/admin/authorized_keys2':
         owner   => $dcache::dcacheuser,
@@ -32,7 +32,7 @@ class dcache::layout  (
   create_resources(dcache::layout::pool, $pools )  
 
   
-  if ($layout_hash != 'nodeff') {
+  if ($layout_hash != 'nodef') {
     file { "${l_file}.puppet":
       owner   => $dcache::dcacheuser,
       group   => $dcache::dcachegroup,

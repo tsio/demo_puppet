@@ -20,7 +20,7 @@ class common  {
   
   include common::repos
 
-  $mail_forward = hiera('mail_forward','nodeff')
+  $mail_forward = hiera('mail_forward','nodef')
 
   file {
       '/root/.forward':
@@ -31,7 +31,7 @@ class common  {
       ensure  => present,
   }
 
-  $resolv_conf = hiera('resolv_conf','nodeff')
+  $resolv_conf = hiera('resolv_conf','nodef')
 
   file {
       '/etc/resolv.conf':

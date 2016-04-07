@@ -1,7 +1,7 @@
-class dcache::config ($conf = 'nodeff',) {
+class dcache::config ($conf = 'nodef',) {
   $dcache_conf = $conf
 
-  if ($dcache_conf != 'nodeff') {
+  if ($dcache_conf != 'nodef') {
     file { "${dcache::dcache_etc_dir}/dcache.conf":
       owner   => $dcache::dcacheuser,
       group   => $dcache::dcachegroup,

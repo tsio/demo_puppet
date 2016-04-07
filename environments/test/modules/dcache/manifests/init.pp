@@ -7,7 +7,7 @@ class dcache (
   $conf                  = 'undef',
   $dcache_layout         = 'undef',
   $dcahe_poolmanagerconf = '/var/lib/dcache/config/poolmanager.conf',
-  $admin_ssh_keys = 'nodeff', ) {
+  $admin_ssh_keys = 'nodef', ) {
 
 
   anchor { 'dcache::start': } ->

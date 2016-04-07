@@ -1,4 +1,5 @@
 :hierarchy:
+    - "environments/%{environment}/modules/%{module_name}/hieradata/example"
     - "environments/%{environment}/hieradata/common"
 
 

@@ -1,10 +1,10 @@
 class dcache::poolmanager (
   $poolmanagerconf_file = '/var/lib/dcache/config/poolmanager.conf',
-  $poolmanager_conf     = hiera('pm_cfg_ildg', 'nodeff'),
-  # $poolmanager_conf=hiera('poolmanager_cfg','nodeff'),
+  $poolmanager_conf     = hiera('pm_cfg_ildg', 'nodef'),
+  # $poolmanager_conf=hiera('poolmanager_cfg','nodef'),
   ) {
                
-  if ($poolmanager_conf != 'nodeff') {
+  if ($poolmanager_conf != 'nodef') {
     #  dump poolmamager as multiline string : e.g.
     #  poolmanager_cfg: |
     #    cm set debug off

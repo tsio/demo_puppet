@@ -12,7 +12,7 @@ node 'localhost.localdomain' {
   } ->
   class { 'postgresql::server': }
 
-  create_resources(postgresql::server::pg_hba_rule, hiera(pg_hba_rules, 'nodeff'))
+  create_resources(postgresql::server::pg_hba_rule, hiera(pg_hba_rules, 'nodef'))
 
   #  postgresql::server::pg_hba_rule { 'Dcache_01':
   #    description => 'local is for Unix domain socket connections only',
@@ -61,12 +61,14 @@ node 'localhost.localdomain' {
   }
 
   class { 'dcache':
-    package_ensure => hiera('dcache_version'),
-    conf           => hiera('dcache_conf', 'nodeff'),
-    admin_ssh_keys => hiera('dc_ssh_pub_keys', 'nodeff'),
-    layout         => hiera('dcache_layout', 'nodeff'),
-    pools_setup    => hiera('pools_setup', 'nodeff'),
-    require        => [
+    package_ensure   => hiera('dcache_version'),
+    conf             => hiera('dcache_conf', 'nodef'),
+    admin_ssh_keys   => hiera('ssh_pub_keys', 'nodef'),
+    layout           => hiera('dcache_layout', 'nodef'),
+    pools_setup      => hiera('pools_setup', 'nodef'),
+    poolmanager_conf => hiera('poolmanager_cfg_txt', 'nodef'),
+    gplazma_conf     => hiera('gplazma_conf', 'nodef'),
+    require          => [
       Package['java-1.8.0-openjdk'],
       Postgresql::Server::Db['billing'],
       Postgresql::Server::Db['chimera'],
