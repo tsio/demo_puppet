@@ -14,33 +14,6 @@ node 'localhost.localdomain' {
 
   create_resources(postgresql::server::pg_hba_rule, hiera(pg_hba_rules, 'nodef'))
 
-  #  postgresql::server::pg_hba_rule { 'Dcache_01':
-  #    description => 'local is for Unix domain socket connections only',
-  #    type        => 'local',
-  #    database    => 'all',
-  #    user        => 'all',
-  #    address     => '',
-  #    auth_method => 'trust',
-  #  }
-
-  #  postgresql::server::pg_hba_rule { 'Dcache_02':
-  #    description => 'local  IPv4',
-  #    type        => 'host',
-  #    database    => 'all',
-  #    user        => 'all',
-  #    address     => '127.0.0.1/32',
-  #    auth_method => 'trust',
-  #  }
-
-  #  postgresql::server::pg_hba_rule { 'Dcache_03':
-  #    description => 'local  IPv6',
-  #    type        => 'host',
-  #    database    => 'all',
-  #    user        => 'all',
-  #    address     => '::1/128',
-  #    auth_method => 'trust',
-  #  }
-
   postgresql::server::role { 'chimera': } ->
   postgresql::server::db { 'chimera':
     owner    => 'chimera',
@@ -80,3 +53,29 @@ node 'localhost.localdomain' {
 
 }
 
+#  postgresql::server::pg_hba_rule { 'Dcache_01':
+#    description => 'local is for Unix domain socket connections only',
+#    type        => 'local',
+#    database    => 'all',
+#    user        => 'all',
+#    address     => '',
+#    auth_method => 'trust',
+#  }
+
+#  postgresql::server::pg_hba_rule { 'Dcache_02':
+#    description => 'local  IPv4',
+#    type        => 'host',
+#    database    => 'all',
+#    user        => 'all',
+#    address     => '127.0.0.1/32',
+#    auth_method => 'trust',
+#  }
+
+#  postgresql::server::pg_hba_rule { 'Dcache_03':
+#    description => 'local  IPv6',
+#    type        => 'host',
+#    database    => 'all',
+#    user        => 'all',
+#    address     => '::1/128',
+#    auth_method => 'trust',
+#  }
