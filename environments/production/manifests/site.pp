@@ -1,9 +1,9 @@
 # /etc/puppet/manifests/site.pp
 
-stage { 'first': before => Stage['main'], }
+# stage { 'first': before => Stage['main'], }
 
 node 'localhost.localdomain' {
-  class { 'common': stage => first, }
+  #  class { 'common': stage => first, }
 
   class { 'postgresql::globals':
     encoding             => 'UTF-8',
